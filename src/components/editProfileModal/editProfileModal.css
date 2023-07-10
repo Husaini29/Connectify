@@ -1,0 +1,117 @@
+.edit-profile-modal-container{
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+.edit-profile{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 18rem;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--white);
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24)
+}
+
+.edit-profile-header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    color: var(--light-pink);
+}
+h2{
+    margin: 0;
+}
+span{
+    font-size: 18px;
+    cursor: pointer;
+}
+.edit-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+.edit-image img{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.edit-image-icon{
+    color: #000;
+    position: relative;
+    left: -1rem;
+    top: -5px;
+    background: white;
+    z-index: 5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.edit-user-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 60px;
+    color: #000;
+}
+
+.edit-name{
+    align-items: center;
+    display: flex;
+    gap: 1.8rem;
+    justify-content: space-between;
+}
+
+.edit-user-details input{
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-family: Poppins,sans-serif;
+    padding: 5px;
+
+}
+
+.edit-website{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-user-details .edit-website input{
+    width: 96%;
+}
+.edit-bio{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-bio textarea{
+    font-family: Poppins,sans-serif;
+    height: 5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    padding: 0.5rem;
+    resize: none;
+    width: calc(100% - 1rem);
+}
+
+.update-profile-btn{
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--light-pink);
+    color: var(--white);
+    font-size: inherit;
+    cursor: pointer;
+}

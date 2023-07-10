@@ -1,0 +1,88 @@
+.header-container{
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    background: var(--Primary-Color);
+    z-index: 9;
+}
+
+.header-container h3{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--light-pink)
+}
+.search-input{
+    width: 10rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+    top: 1rem;
+    height: 1rem;
+    font-size: inherit;
+}
+.search-input:focus{
+    outline: none;
+}
+    
+.logout{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.users-list{
+    background: var(--Primary-Color);
+    position: fixed;
+    top: 3.4rem;
+    border-radius: 5px;
+    left: 8.5rem;
+    width: 11rem;
+}
+
+.searched-users-profile{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.searched-name{
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    padding: 0.5rem 0;
+}
+
+hr{
+    width: calc(100% - 15px);
+}
+.user-not-found{
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width:764px){
+    .search-input{
+        width: 15rem;
+    }
+    .users-list{
+        left: 17.5rem;
+        width: 13rem;
+    }
+}
+
+@media (min-width:1024px){
+    .search-input{
+        width: 18rem;
+    }
+    .users-list{
+        left: 33.5rem;
+        width: 15rem;
+    }
+}

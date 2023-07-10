@@ -1,0 +1,58 @@
+.form-container{
+    border: 2px solid var(--white);
+    display: inline-block;
+    width: 23rem;
+    border-radius: 5px;
+    position: relative;
+    top: 7rem;
+    left: 35rem;
+    background: var(--secondary-color);
+    box-shadow: 3px 3px 3px 3px var(--secondary-color);;
+}
+
+.app-name{
+    color: var(--light-pink);
+}
+.form-label{
+    margin-left: 3rem;
+    line-height: 2;
+}
+.form-input{
+    padding: 0.5rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    width: 16rem;
+    font-size: inherit;
+}
+.form-input:focus{
+    outline: none;
+}
+.login-btn{
+    margin: 1rem 3rem;
+    width: 17rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: inherit;
+    cursor: pointer;
+    background: var(--light-pink);
+    color: var(--white);
+}
+
+.guest-btn{
+    width: 17rem;
+    margin-left: 3rem;
+    padding: 0.5rem;
+    border: 2px solid var(--light-pink);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--white);
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.signup-nav{
+    text-decoration: none;
+    margin-left: 7px;
+    color: var(--light-pink);
+}

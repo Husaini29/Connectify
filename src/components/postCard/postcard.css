@@ -1,0 +1,28 @@
+.user-details-wrapper{
+    display: flex;
+    align-items: center;
+}
+.user-post-card{
+    cursor: pointer;
+}
+.like-post{
+cursor: pointer;
+}
+
+.comment-post{
+cursor: pointer;
+}
+
+.bookmark-post{
+cursor: pointer;
+}
+
+.edit-options{
+    display: flex;
+}
+.edit-delete-div{
+    background: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}

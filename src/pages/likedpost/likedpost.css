@@ -1,0 +1,9 @@
+.likedpost-container{
+    display: flex;
+    flex: 3;
+}
+
+.post-head{
+    display: flex;
+    justify-content: center;
+}

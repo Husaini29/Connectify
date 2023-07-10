@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;1,200&display=swap');
+
+:root{
+  --primary-color: #003049;
+  --secondary-color:#062a3d;
+  --secondary2-color: #212738;
+  --secondary: #D62828;
+  --light-orange: #F77F00;
+  --light-golden: #FCBF49;
+  --cream: #EAE2B7;
+  --light-pink:#ff3d64;
+  --custom-2:#ff3d58;
+  --white:#fff;
+
+
+  --second-secondary: #F97068;
+  --greenshish: #D1D646;
+  --blueish: #57C4E5;
+  --dull-white:#EDF2EF;
+
+    --Primary-Color: #00B4D8;
+    --Accent-Color-1: #F9A826;
+    --Accent-Color-2: #2B2D42;
+    --Neutral-Color-1: #F5F5F5;
+    --Neutral-Color-2: #333333;
+
+    --Primary-Color: #3C6382;
+    --Accent-Color-1: #F4D35E; 
+    --Accent-Color-2: #EE964B;
+    --Neutral-Color-1: #F8F9FA;
+    --Neutral-Color-2: #1B262C;
+}
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+  /* font-family: "Nutino-sans"; */
+}
+
+.block{
+  display: block;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+}

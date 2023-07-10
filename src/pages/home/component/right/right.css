@@ -1,0 +1,67 @@
+.right-container{
+    display: none;
+}
+
+@media (min-width:764px){
+    .right-container{
+        display: block;
+        flex: 1.5;
+        text-align: center;
+        border-left: 2px solid var(--white);
+    }
+    .right-wrapper{
+        position: relative;
+        top: 0.5rem;
+        padding: 0.2rem;
+    }
+
+    .suggested-users{
+        display: grid;
+        grid-template-columns: 0.2fr 2fr 1fr;
+        align-items: center;
+        line-height: 1.5;
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .suggested-user-image{
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    .suggested-user-details{
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    .user-name{
+        display: flex;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .follow-btn{
+        border: none;
+        border-radius: 5px;
+        padding: 0.3rem;
+        font-size: inherit;
+        background: var(--light-pink);
+        color: var(--white);
+        cursor: pointer;
+    }
+    .follow-btn:hover{
+        background:#e96580;
+    }
+}
+
+@media (min-width:1024px){
+    .right-wrapper{
+        top: 1rem;
+        padding: 1rem;
+        margin-left: 2%;
+        width: 15rem;
+    }
+}

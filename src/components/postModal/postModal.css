@@ -1,0 +1,77 @@
+.edit-post-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.5);
+    inset: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+}
+
+.edit-post-modal{
+    background-color: var(--white);
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,.24);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 18rem;
+    padding: 1rem;
+    width: 100%;
+    color: #000;
+}
+
+.edit-post-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.edit-post-modal-header h2{
+    color: var(--light-pink);
+    margin: 0;
+    padding: 0;
+}
+
+.edit-post-modal-header span{
+    font-size: 24px;
+}
+
+.post-modal-textarea{
+    font-family: Poppins,sans-serif;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    border: 1px solid var(--light-pink);
+    height: 125px;
+    padding: 1rem;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-top: 1rem;
+    width: 16rem;
+}
+
+.post-modal-btn{
+    background-color: var(--light-pink);
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-family: Poppins,sans-serif;
+    padding: 10px 25px;
+    border-radius: 5px;
+    float: right;
+}
+.post-modal-btn:hover{
+    background-color: #e96580;
+}
+@media (min-width:1024px){
+    .post-modal-textarea{
+        width: 24rem;
+    }
+    .edit-post-modal{
+        max-width:26rem;
+    }
+}
