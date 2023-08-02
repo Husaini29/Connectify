@@ -99,7 +99,7 @@ export const PostCard = ({ post }) => {
                   {!isPostLiked() ? <AiOutlineHeart/> : <AiFillHeart/>}
                   <span className='count'>{likeCount}</span>
                 </span>
-                <span className='comment-post'>
+                <span className='comment-post' onClick={()=> navigate(`/post/${_id}`)}>
                   <FaRegComment/>
                   <span className='count'>{comments?.length}</span>
                 </span>

@@ -2,3 +2,10 @@
     display: flex;
     flex: 3;
 }
+
+.bookmark-head{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1rem;
+}

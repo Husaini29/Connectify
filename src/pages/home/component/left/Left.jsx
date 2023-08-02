@@ -4,7 +4,7 @@ import { MdExplore } from "react-icons/md";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import "./left.css";
-import { useNavigate } from 'react-router-dom';
+import { NavLink,useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { PostModal } from '../../../../components/postModal/PostModal';
 import { useAuth } from '../../../../context/AuthContext';
@@ -14,42 +14,48 @@ export const Left = () => {
   const [ createPostModal,setCreatePostModal ] = useState(false);
   const { currentUser } = useAuth();
 
+  const getActiveStyle =({ isActive })=>({
+    background: isActive && "var(--light-pink)",
+    color: isActive && "var(--white)"
+  })
+
 
   return (
+    <div style={{ width:"17%" }}>
     <div className='left-container' >
-      <div className='left-icons-div' onClick={()=> navigate("/")}>
-        <AiFillHome/>
+      <NavLink to="/" className='left-icons-div' style={getActiveStyle}>
+        <span><AiFillHome /></span>
         <span className='left-icon-tags'>
           Home
         </span>
-      </div>
-      <div className='left-icons-div' onClick={()=> navigate("/explore")}>
-        <MdExplore/>
+      </NavLink>
+      <NavLink to="/explore" className='left-icons-div' style={getActiveStyle}>
+        <span><MdExplore /></span>
         <span className='left-icon-tags'>
           Explore
         </span>
-      </div>
-      <div className='left-icons-div' onClick={()=> navigate("/likedpost")}>
-        <AiFillHeart/>
+      </NavLink>
+      <NavLink to="/likedpost" className='left-icons-div' style={getActiveStyle}>
+        <span><AiFillHeart /></span>
         <span className='left-icon-tags'>
           Liked Post
         </span>
-      </div>
-      <div className='left-icons-div' onClick={()=> navigate("/bookmark")}>
-        <BsFillBookmarkFill/>
+      </NavLink>
+      <NavLink to="/bookmark" className='left-icons-div' style={getActiveStyle}>
+        <span><BsFillBookmarkFill /></span>
         <span className='left-icon-tags'>
           Bookmark
         </span>
-      </div>
+      </NavLink>
 
-      <div className='left-icons-div' onClick={()=> navigate(`/profile/${currentUser?.username}`)}>
-        <BiUserCircle/>
+      <NavLink to={`/profile/${currentUser?.username}`} className='left-icons-div' style={getActiveStyle}>
+        <span><BiUserCircle /></span>
         <span className='left-icon-tags'>
           Profile
         </span>
-      </div>
+      </NavLink>
       <div className='create-post-btn' onClick={()=> setCreatePostModal(true)}>
-        <button className='left-icon-tags'>
+        <button className='left-icon-tags' >
           Create Post
         </button>
       </div>
@@ -57,6 +63,7 @@ export const Left = () => {
       {
         createPostModal && <PostModal setCreatePostModal={setCreatePostModal}/>
       }
+    </div>
     </div>
   )
 }

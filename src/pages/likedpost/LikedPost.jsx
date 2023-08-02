@@ -19,8 +19,8 @@ export const LikedPost = () => {
         <Header/>
     <div className='likedpost-container'>
         <Left/>
-        <div>
-            { likedPosts.length === 0 && <h3>No Post Liked</h3>}
+        <div style={{ width:"60%" }}>
+            { likedPosts.length === 0 && <h3 className='post-head'>No Post Liked</h3>}
             { likedPosts.length > 0 && (
                 <div>
                     <h3 className='post-head'>Liked Posts</h3>

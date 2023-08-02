@@ -44,69 +44,69 @@ export const UserProfile = () => {
         <Header/>
         <div style={{ display:"flex"}}>
             <Left/>
-    <div style={{ width:"50%"}}>
-        <div key={_id} className='userprofile-container'>
-            <div className='user-post-card'>
-                <span>
-                    <img src={avatarUrl || "/images/avatar.png"} className='user-avatar' alt='userProfile'/>
-                </span>
-                <div>
-                    <div className='user-details'>
-                        <p className='user-fullName'>{firstName} {lastName}</p>
-                    </div>
-                        <p className='user-username'>@{selectedUser.username}</p>
-                </div>
-            </div>
-            <div className='edit-profile-details'>
-                <span>
-                    { username === currentUser?.username ?(
-                        <div>
-                            <button className='edit-btn' onClick={()=>setEditProfileModal(true)}>Edit Profile</button>
-                            {editProfileModal && (
-                                <EditProfileModal
-                                selectedUser={selectedUser}
-                                setEditProfileModal={setEditProfileModal}
-                                />
-                            )}
+                <div style={{ width:"60%"}}>
+                    <div key={_id} className='userprofile-container'>
+                        <div className='user-post-card'>
+                            <span>
+                                <img src={avatarUrl || "/images/avatar.png"} className='user-avatar' alt='userProfile'/>
+                            </span>
+                            <div>
+                                <div className='user-details'>
+                                    <p className='user-fullName'>{firstName} {lastName}</p>
+                                </div>
+                                    <p className='user-username'>@{selectedUser.username}</p>
+                            </div>
                         </div>
-                    ) : (
-                        <button className='edit-btn'
-                            onClick={()=> followClickHandler()}
-                        >
-                            {isFollowed(_id)
-                            ? "UnFollow"
-                            : "Follow"}
-                        </button>
-                    )
-                }
-                </span>
-                <span onClick={logoutHandler}
-                    className='logout-span'>
-                    <FiLogOut/>
-                </span>
-            </div>
-            <div className='user-bio-website'>
-                <p>{bio}</p>
-                <NavLink className="website">{website}</NavLink>
-            </div>
-            <div>
-                <p className='following-details'>
-                    <span>{selectedUser?.following?.length}</span>
-                    <span>Following</span>
-                    <span>{selectedUser?.followers?.length}</span>
-                    <span>Follower</span>
-                </p>
-            </div>
-            <hr/>
-        </div>
-        {
-            userPost.map(post=>
-                <PostCard key={post._id} post={post}/>)
-        }    
-    </div>
-        <Right/>
-    </div> 
-    <Footer/>   
+                        <div className='edit-profile-details'>
+                            <span>
+                                { username === currentUser?.username ?(
+                                    <div>
+                                        <button className='edit-btn' onClick={()=>setEditProfileModal(true)}>Edit Profile</button>
+                                        {editProfileModal && (
+                                            <EditProfileModal
+                                            selectedUser={selectedUser}
+                                            setEditProfileModal={setEditProfileModal}
+                                            />
+                                        )}
+                                    </div>
+                                ) : (
+                                    <button className='edit-btn'
+                                        onClick={()=> followClickHandler()}
+                                    >
+                                        {isFollowed(_id)
+                                        ? "UnFollow"
+                                        : "Follow"}
+                                    </button>
+                                )
+                            }
+                            </span>
+                            <span onClick={logoutHandler}
+                                className='logout-span'>
+                                <FiLogOut/>
+                            </span>
+                        </div>
+                        <div className='user-bio-website'>
+                            <p>{bio}</p>
+                            <NavLink className="website">{website}</NavLink>
+                        </div>
+                        <div>
+                            <p className='following-details'>
+                                <span>{selectedUser?.following?.length}</span>
+                                <span>Following</span>
+                                <span>{selectedUser?.followers?.length}</span>
+                                <span>Follower</span>
+                            </p>
+                        </div>
+                        <hr/>
+                    </div>
+                    {
+                        userPost.map(post=>
+                            <PostCard key={post._id} post={post}/>)
+                    }    
+                </div>
+            <Right/>
+        </div> 
+        <Footer/>   
     </div>    
   )
 }

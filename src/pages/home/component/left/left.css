@@ -8,17 +8,25 @@
         flex-direction: column;
         flex: 0.5;
         font-size: 22px;
-        padding: 0.5rem 1rem;
-        line-height: 3;
+        padding: 0.5rem 0;
+        line-height: 2.8;
         border-right: 2px solid var(--white);
+        position: sticky;
+        top: 4rem;
+        height: 100vh;
     }
     .left-icons-div{
         cursor: pointer;
+        text-decoration: none;
+        color: var(--white);
         }
     .left-icons-div:hover{
         color: var(--light-pink)
     }
 
+    .left-icons-div span{
+        margin-left: 15px;
+    }
     .left-icon-tags{
         display: none;
     }
@@ -44,11 +52,12 @@
     .create-post-btn button{
         background: var(--light-pink);
         color: var(--white);
-        width: 70%;
+        width: 85%;
         padding: 0.5rem;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        margin-left: 26px;
     }
     .create-post-btn button:hover{
         background-color: #e96580;

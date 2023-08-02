@@ -35,6 +35,7 @@ export const Right = () => {
   }
 
   return (
+    <div style={{ width:"24%" }}>
     <div className='right-container'>
       <div className='right-wrapper'>
         <h3>Suggestion for you</h3>
@@ -59,6 +60,7 @@ export const Right = () => {
           })
         }
       </div>
+    </div>
     </div>
   )
 }

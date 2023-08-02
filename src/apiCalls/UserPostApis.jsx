@@ -6,9 +6,9 @@ export const getPostById = async(postId)=> await axios.get(`/api/posts/${postId}
 
 export const getPostByUsername = async(username)=> await axios.get(`/api/posts/user/${username}`);
 
-export const createPost = async(post,encodedToken)=> 
+export const createPost = async(post,media,encodedToken)=> 
     await axios.post("/api/posts",
-    { postData: {content: post} },
+    { postData: {content: post, mediaURL: media ? media : "" } },
     { headers: { authorization: encodedToken }
 });
 
@@ -17,9 +17,9 @@ export const deletePost = async(postId,encodedToken)=>
     { headers: { authorization: encodedToken}
 });
 
-export const editPost = async(postId,postData,encodedToken)=>
+export const editPost = async(postId,postData,media,encodedToken)=>
     await axios.post(`/api/posts/edit/${postId}`,
-    {postData : { content:postData}},
+    {postData : { content:postData, mediaURL: media ? media : "" }},
     { headers: { authorization: encodedToken }
 });
 

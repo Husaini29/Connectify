@@ -30,7 +30,7 @@ export const users = [
     },
   ],
     avatarUrl:
-      "https://res.cloudinary.com/dtrjdcrme/image/upload/v1651473734/socialmedia/avatars/adarsh-balika_dct6gm.webp",
+      "/images/avatar4.webp",
     website: "https://husaini-bohra.netlify.app/",
     createdAt: "2022-01-01T10:55:06+05:30",
     updatedAt: formatDate(),
@@ -51,7 +51,7 @@ export const users = [
       }
     ],
     avatarUrl:
-      "https://res.cloudinary.com/dtrjdcrme/image/upload/v1651554207/socialmedia/avatars/john-doe_gbkuda.webp",
+      "/images/avatar6.webp",
     website: "https://google.com/",
     createdAt: "2022-01-02T10:55:06+05:30",
     updatedAt: formatDate(),
@@ -72,7 +72,7 @@ export const users = [
       }
     ],
     avatarUrl:
-      "https://res.cloudinary.com/dtrjdcrme/image/upload/v1651554256/socialmedia/avatars/jane-doe_il3cvx.webp",
+      "/images/avatar3.webp",
     website: "https://husaini-bohra.netlify.app/",
     createdAt: "2022-01-01T10:55:06+05:30",
     updatedAt: formatDate(),

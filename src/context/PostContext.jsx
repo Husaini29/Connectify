@@ -35,9 +35,9 @@ export function PostProvider({ children }){
     }
 
 
-    const createNewPost = async(post)=>{
+    const createNewPost = async(post,media)=>{
         try{
-            const res = await createPost(post,token);
+            const res = await createPost(post,media,token);
             console.log(res);
             const { status, data:{ posts } } = res;
             if(status === 201){
@@ -51,9 +51,9 @@ export function PostProvider({ children }){
         }
     }
 
-    const editUserPost = async(postId,postData)=>{
+    const editUserPost = async(postId,postData,media)=>{
         try{
-            const res = await editPost(postId,postData,token);
+            const res = await editPost(postId,postData,media,token);
             console.log(res);
             const { status, data:{ posts } } = res;
             if(status === 201){
